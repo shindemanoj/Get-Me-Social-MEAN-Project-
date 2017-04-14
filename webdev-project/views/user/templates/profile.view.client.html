@@ -1,0 +1,149 @@
+<header id="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/user/{{model.userId}}/events"><h1><img src="images/logo2.png" alt="logo"></h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#/user/{{model.userId}}/events">Events</a></li>
+                    <li ><a href="#/user/{{model.userId}}/sport">Host an event</a></li>
+                    <li ng-if="model.user.role == 'ADMIN'"><a href="#/admin/{{model.userId}}">Admin</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#/user/{{model.user._id}}/profile"><i class="fa fa-user fa-fw"></i> My Account</a>
+                            </li>
+                            <li><a href="#login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/navbar-->
+</header> <!--/#navigation-->
+
+    <div class="container-fluid ">
+
+        <div CLASS="alert alert-danger" ng-show="model.error">
+            {{model.error}}
+        </div>
+
+        <div class="alert alert-success" ng-show="model.message">
+            {{model.message}}
+        </div>
+
+        <div class="row wbdev-profile-heading form-group col-sm-offset-2">
+            <h4 class="fa fa-beer text-info"> Welcome {{model.user.firstName}} !</h4>
+        </div>
+
+        <form class="form-horizontal ng-pristine ng-valid ng-valid-email">
+            <div class="form-group">
+                <label for="first-name" class="col-sm-2 control-label">First Name</label>
+                <div class="col-sm-10">
+                <input ng-model="model.user.firstName" type="text" id="first-name" class="form-control ng-pristine ng-valid ng-touched" placeholder="First name">
+            </div>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name" class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-10">
+                <input ng-model="model.user.lastName" type="text" class="form-control" id="last-name" placeholder="Last Name">
+            </div>
+            </div>
+
+            <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-10">
+                <input ng-model="model.user.username" type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email address</label>
+                <div class="col-sm-10">
+                <input ng-model="model.user.email" type="email" class="form-control" id="email" placeholder="abc@gmail.com">
+            </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="address" class="col-sm-2 control-label">Address</label>
+                <div class="col-sm-10">
+                    <input ng-model="model.user.address" type="text" class="form-control" id="address" placeholder="Address">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="zipcode" class="col-sm-2 control-label">Zipcode</label>
+                <div class="col-sm-10">
+                    <input ng-model="model.user.zipcode" type="text" class="form-control" id="zipcode" placeholder="Zipcode">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Your Interests</label>
+                <div class="col-sm-10">
+                <div class="checkbox">
+                    <label><input  type="checkbox"  ng-model="model.user.sports" name="interest" />Sports</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"  ng-model="model.user.movies" name="interest" />Movies</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="model.user.rest" name="interest"/>Restaurants</label>
+                </div>
+                </div>
+            </div>
+
+        </form>
+
+
+        <div class=" col-sm-offset-2 col-sm-10">
+        <a class="btn btn-primary btn-block" ng-click="model.updateUser(model.user)">Update</a>
+
+        <a ng-click="model.unregisterUser(model.user)" class="btn btn-danger btn-block">Delete</a>
+            <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo">My Events</button>
+            <br>
+            <div class="form-group">
+                <div id="demo" class="collapse">
+                    <div ng-repeat="event in model.events" class="col-sm-6">
+
+                        <div class="single-blog">
+                            <div class="center-cropped">
+                                <img ng-src="{{event.url}}" class="img-responsive"/>
+                            </div>
+                            <h2>{{event.eventName}}</h2>
+                            <ul class="post-meta">
+                                <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> {{event.eventCreator}}</li>
+                                <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> {{event.dateCreated | date:"MM/dd/yyyy"}}</li>
+                            </ul>
+
+                            <a href="" class="btn btn-primary" ng-click="model.showEvent(event)">Read More</a>
+                            &nbsp;&nbsp;&nbsp;
+                            Likes:&nbsp;{{event.likes}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                <p>Copyright &copy; 2017 - <a href="#">Manoj and Prashant </a> | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</nav><!--/#footer-->

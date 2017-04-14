@@ -1,0 +1,89 @@
+<header id="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/user/{{model.userId}}/events"><h1><img src="images/logo2.png" alt="logo"></h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#/user/{{model.userId}}/events">Events</a></li>
+                    <li><a ng-href="{{model.eventHref}}">Host an event</a></li>
+                    <li ng-if="model.user.role == 'ADMIN'"><a href="#/admin/{{model.userId}}">Admin</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#/user/{{model.user._id}}/profile"><i class="fa fa-user fa-fw"></i> My Account</a>
+                            </li>
+                            <li><a ng-click="model.logout()"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/navbar-->
+</header> <!--/#navigation-->
+
+<div class="container-fluid">
+    <div class="row text-center clearfix">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="title-one">Events</h2>
+            <p class="blog-heading">Search for the events in which you are interested..</p>
+            <p> Enter sport/movie/restaurant or any specific event to filter the events</p>
+        </div>
+    </div>
+<div class="row">
+        <div class="container-fluid">
+            <div class="form-group">
+
+            <input ng-model="searchText" id="r" type="text" name="search" placeholder="Search.." /><br></div></div>
+        <!--<p align="right"> <label>Search: <input ng-model="searchText"></label>-->
+        <div id="searchTextResults">
+            <br>
+            <div ng-if="!model.events.length">No events found.</div>
+            <div ng-repeat="event in model.events | filter:searchText" class="col-sm-4">
+
+                <div class="single-blog">
+                    <div class="center-cropped">
+                    <img ng-src="{{event.url}}" class="img-responsive"/>
+                    </div>
+                    <h2>{{event.eventName}}</h2>
+                    <ul class="post-meta">
+                        <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> {{event.eventCreator}}</li>
+                        <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> {{event.dateCreated | date:"MM/dd/yyyy"}}</li>
+                    </ul>
+
+                    <!--<a href="" class="btn btn-primary" data-toggle="modal" data-target="#{{event.eventName}}">Read More</a>-->
+                    <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{event.eventName}}">Open Modal</button>-->
+                    <a href="" class="btn btn-primary" ng-click="model.showEvent(event)">Read More</a>
+                    &nbsp;&nbsp;&nbsp;
+                    Likes:&nbsp;{{event.likes}}
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                <p>Copyright &copy; 2017 - <a href="#">Manoj and Prashant </a> | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+</nav>

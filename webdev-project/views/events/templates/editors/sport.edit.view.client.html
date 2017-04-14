@@ -1,0 +1,90 @@
+<div class="form-group text-primary text-center">
+<h4 class="btn-group-justified">Make changes to the event !</h4>
+</div>
+<div class="container-fluid">
+    <form class="form-horizontal ng-pristine ng-valid ng-valid-email">
+
+        <div class="form-group">
+            <label for="sport-name" class="col-sm-2 control-label">Sport Event Name</label>
+            <div class="col-sm-10">
+            <input ng-model="model.event.eventName" id="sport-name" type="text"
+                   class="form-control"
+                   placeholder="Sport Name"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="image-url" class="col-sm-2 control-label">Image URL</label>
+            <div class="col-sm-10">
+            <input  ng-model="model.event.url"
+                    id="image-url"
+                    class="form-control"
+                    type="text"
+                    placeholder="Image URL"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sport-review" class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-10">
+            <textarea ng-model="model.event.description"
+                      class="form-control"
+                      id="sport-review"
+                      rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="image-url" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-10">
+            <input  ng-model="model.event.address"
+                    id="address"
+                    class="form-control"
+                    type="text"
+                    placeholder="Address"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <label for="zipcode" class="col-sm-2 control-label">Zip Code</label>
+            <div class="col-sm-10">
+            <input  ng-model="model.event.zipcode"
+                    id="zipcode"
+                    class="form-control"
+                    type="text"
+                    placeholder="Zip Code"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <label for="da" class="col-sm-2 control-label">Date</label>
+            <div class="col-sm-10">
+            <input type="date" ng-model="model.event.eventDate"
+                   class="form-control"
+                   id="da"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ti" class="col-sm-2 control-label">Time</label>
+            <div class="col-sm-10">
+            <input type="time" ng-model="model.event.eventDate"
+                   class="form-control"
+                   id="ti"/>
+            </div>
+        </div>
+
+    </form>
+
+
+<div class="col-sm-offset-2 col-sm-10">
+
+<a class="btn btn-primary btn-block"
+   ng-click="model.updateEvent(model.event)">Update</a>
+
+<a class="btn btn-danger  btn-block"
+   href="#user/{{model.userId}}/events">Cancel</a>
+</div>
+</div>

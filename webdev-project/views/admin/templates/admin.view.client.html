@@ -1,0 +1,72 @@
+<header id="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/user/{{model.adminId}}/events"><h1><img src="images/logo2.png" alt="logo"></h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/user/{{model.adminId}}/events">Events</a></li>
+                    <li ><a href="#/user/{{model.adminId}}/sport">Host an event</a></li>
+                    <li class="active"><a href="#/admin/{{model.adminId}}">Admin</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#/user/{{model.adminId}}/profile"><i class="fa fa-user fa-fw"></i> My Account</a>
+                            </li>
+                            <li><a href="#login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/navbar-->
+</header> <!--/#navigation-->
+<div class="container-fluid">
+    <h1>Admin</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item active">
+            Users
+            <span class="pull-right">Edit/Delete</span>
+        </li>
+        <input ng-model="searchUser" id="r" type="text" name="search" placeholder="Search.." />
+        <li ng-repeat="user in model.users | filter:searchUser" class="list-group-item">
+            {{user.username}} &nbsp;-&nbsp; {{user.role}}
+            <span ng-click="model.deleteUser(user)" class="glyphicon glyphicon-remove pull-right"></span>
+            <span ng-click="model.editUser(user._id)" class="glyphicon glyphicon-edit pull-right"></span>
+        </li>
+    </ul>
+
+    <ul class="list-group">
+        <li class="list-group-item active">
+            Events
+            <span class="pull-right">Edit/Delete</span>
+        </li>
+        <input ng-model="searchEvent" id="r" type="text" name="search" placeholder="Search.." />
+        <li ng-repeat="event in model.events | filter:searchEvent" class="list-group-item">
+            {{event.eventName}} &nbsp;-&nbsp; {{event.type}}
+            <span ng-click="model.deleteEvent(event)" class="glyphicon glyphicon-remove pull-right"></span>
+            <span ng-click="model.updateEvent(event._id)" class="glyphicon glyphicon-edit pull-right"></span>
+        </li>
+        <li ng-if="model.events.length === 0">No Events yet.</li>
+    </ul>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                <p>Copyright &copy; 2017 - <a href="#">Manoj and Prashant </a> | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</nav><!--/#footer-->

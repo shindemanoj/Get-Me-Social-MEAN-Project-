@@ -1,0 +1,56 @@
+   <!-- <div class="home-pattern"></div> -->
+
+   <header id="navigation">
+       <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+           <div class="container">
+               <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                       <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                   </button>
+                   <a class="navbar-brand" href="#home"><h1><img src="images/logo2.png" alt="logo"></h1></a>
+               </div>
+               <div class="collapse navbar-collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                       <li ><a href="#register">Register</a></li>
+                       <li ><a href="#login">Login</a></li>
+                       <li ><a href="#about">About us</a></li>
+
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </header>
+
+   <div class="container-fluid">
+       <div class="row text-center clearfix">
+           <h3>See the events around you..</h3>
+       </div>
+       <div class="row">
+            <div ng-repeat="event in model.events" class="col-sm-4">
+               <div class="single-blog">
+                   <div class="center-cropped">
+                       <img ng-src="{{event.url}}" class="img-responsive"/>
+                   </div>
+                   <h2>{{event.eventName}}</h2>
+                   <ul class="post-meta">
+                       <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> {{event.eventCreator}}</li>
+                       <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> {{event.dateCreated | date:"MM/dd/yyyy"}}</li>
+                   </ul>
+                   Likes:&nbsp;{{event.likes}}
+               </div>
+           </div>
+       </div>
+       <div class="row text-center clearfix">
+           <h4>For more details Register or Login</h4>
+       </div>
+   </div>
+
+   <nav class="navbar navbar-default navbar-fixed-bottom">
+       <footer id="footer">
+           <div class="container">
+               <div class="text-center">
+                   <p>Copyright &copy; 2017 - <a href="#">Manoj and Prashant </a> | All Rights Reserved</p>
+               </div>
+           </div>
+       </footer>
+   </nav><!--/#footer-->

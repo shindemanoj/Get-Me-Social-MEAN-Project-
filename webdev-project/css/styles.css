@@ -1,0 +1,71 @@
+input {
+    margin-bottom: 5px;
+}
+
+body {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    padding-bottom: 100px;
+
+}
+#btn1{
+    margin-top: 5px;
+}
+.navbar a:hover
+{
+    color:deepskyblue !important;
+}
+#span1
+{
+    padding-right: 100px;
+}
+a:hover
+{
+    text-decoration: none;
+    color: blue;
+}
+
+.navbar-default {
+    background-color: #3b5998;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-text {
+    color: white;
+}
+
+.navbar-default .navbar-link {
+    color: white;
+}
+.navbar-text a {
+    color: white;
+
+}
+.jga-toolbar {
+    position: absolute;
+    right: 15px;
+    background-color: white;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: 0.7;
+    z-index: 1;
+}
+.youtube-widget {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.youtube-widget iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+

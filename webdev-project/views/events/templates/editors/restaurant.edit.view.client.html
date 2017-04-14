@@ -1,0 +1,106 @@
+<div class="form-group text-primary text-center">
+    <h4 class="btn-group-justified">Make changes to the restaurant review !</h4>
+</div>
+<div class="container-fluid">
+    <form class="form-horizontal ng-pristine ng-valid ng-valid-email">
+        <div class="form-group" >
+
+            <div class="input-group">
+                    <span class="input-group-addon">
+
+                        <i class="glyphicon glyphicon-cutlery"></i>
+                    </span>
+        <input ng-model="model.event.eventName" id="movie-name" type="text"
+               class="form-control"
+               placeholder="Restuarant Name"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+
+            <div class="input-group">
+                    <span class="input-group-addon">
+
+                        <i class="glyphicon glyphicon-picture"></i>
+                    </span>
+        <input  ng-model="model.event.url"
+                id="image-url"
+                class="form-control"
+                type="text"
+                placeholder="Image URL"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+
+            <div class="input-group">
+                    <span class="input-group-addon">
+
+                        <i class="glyphicon glyphicon-text-width"></i>
+                    </span>
+        <textarea ng-model="model.event.description"
+                  class="form-control"
+                  id="movie-review"
+                  placeholder="Restaurant review"
+                  rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group" >
+
+            <div class="input-group">
+                    <span class="input-group-addon">
+
+                        <i class="glyphicon glyphicon-globe"></i>
+                    </span>
+        <input  ng-model="model.event.address"
+                id="address"
+                class="form-control"
+                type="text"
+                placeholder="Address"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+
+            <div class="input-group">
+                    <span class="input-group-addon">
+
+                        <i class="glyphicon glyphicon-globe"></i>
+                    </span>
+        <input  ng-model="model.event.zipcode"
+                id="zipcode"
+                class="form-control"
+                type="text"
+                placeholder="Zip Code"/>
+            </div>
+        </div>
+
+        <div class="form-group" >
+
+            <div class="input-group">
+                    <span class="input-group-addon">
+
+                        <i class="glyphicon glyphicon-star"></i>
+                    </span>
+        <fieldset class="rating" >
+            <input type="radio" ng-model="model.event.rating" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" ng-model="model.event.rating" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" ng-model="model.event.rating" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+        </fieldset>
+            </div>
+        </div>
+    </form>
+    <a class="btn btn-primary btn-block"
+       ng-click="model.updateEvent(model.event)">Update</a>
+
+<a class="btn btn-danger  btn-block"
+   href="#user/{{model.userId}}/events">Cancel</a>
+</div>

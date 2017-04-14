@@ -1,0 +1,90 @@
+<header id="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/user/{{model.userId}}/events"><h1><img src="images/logo2.png" alt="logo"></h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#/user/{{model.userId}}/events">Events</a></li>
+                    <li ><a href="#/user/{{model.userId}}/sport">Create</a></li>
+                    <li class="scroll"><a href="#/user/{{model.user._id}}/profile">Profile</a></li>
+
+
+                    <!--<li class="scroll"><a href="#portfolio">Portfolio</a></li>
+                    <!--<li class="scroll"><a href="#clients">Clients</a></li>-->
+                    <!--<li class="scroll"><a href="#blog">Blog</a></li>-->
+                    <!--<li class="scroll"><a href="#contact">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div><!--/navbar-->
+</header> <!--/#navigation-->
+
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <label for="sport-name" class="">Sport Event Name</label>
+            <input ng-model="model.event.eventName" id="sport-name" type="text"
+                   class="form-control"
+                   placeholder="Sport Name"/>
+
+            <label for="image-url">Image URL</label>
+            <input  ng-model="model.event.url"
+                    id="image-url"
+                    class="form-control"
+                    type="text"
+                    placeholder="Image URL"/>
+
+            <label for="sport-review">Description</label>
+            <textarea ng-model="model.event.description"
+                      class="form-control"
+                      id="sport-review"
+                      rows="3"></textarea>
+
+            <label for="image-url">Address</label>
+            <input  ng-model="model.event.address"
+                    id="address"
+                    class="form-control"
+                    type="text"
+                    placeholder="Address"/>
+
+            <label for="zipcode">Zip Code</label>
+            <input  ng-model="model.event.zipcode"
+                    id="zipcode"
+                    class="form-control"
+                    type="text"
+                    placeholder="Zip Code"/>
+
+            <label for="da">Date</label>
+            <input type="date" ng-model="model.event.eventDate"
+                   class="form-control"
+                   id="da"/>
+
+            <label for="ti">Time</label>
+            <input type="time" ng-model="model.event.eventDate"
+                   class="form-control"
+                   id="ti"/>
+        </div>
+    </form>
+</div>
+
+<a class="btn btn-primary btn-block"
+   ng-click="model.updateEvent(model.event)">Update</a>
+
+<a class="btn btn-danger  btn-block"
+   href="#user/{{model.userId}}">Cancel</a>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                <p>Copyright &copy; 2017 - <a href="#">Manoj and Prashant </a> | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</nav>

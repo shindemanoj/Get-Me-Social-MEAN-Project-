@@ -1,0 +1,26 @@
+/*body {*/
+    /*background: linear-gradient(to bottom, #fff 0%, #eee 100%);*/
+    /*font-size: 4em;*/
+    /*height: 100vh;*/
+/*}*/
+/*.content {*/
+    /*margin: 30% auto;*/
+    /*text-align: center;*/
+/*}*/
+/*a {*/
+    /*color: gray;*/
+    /*text-decoration: none !important;*/
+/*}*/
+.glyphicon {
+    transition: all .5s;
+}
+.glyphicon-heart{
+     color: #e74c3c;
+ }
+.glyphicon-heart-empty{
+
+ }
+/*:hover {*/
+     /*transform: scale(1.1);*/
+ /*}*/
+

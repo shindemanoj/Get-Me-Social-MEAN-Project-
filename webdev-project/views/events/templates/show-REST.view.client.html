@@ -1,0 +1,137 @@
+<div class="container-fluid">
+    <div class="alert alert-success" ng-show="model.message">
+        {{model.message}}
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <img ng-src={{model.event.url}} class="img-responsive" />
+        </div>
+        <div class="form-group">
+            <h5>Map and Directions:</h5>
+            <iframe width="100%" height="250px" class="embed-responsive-item" ng-src={{model.source}} frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-sm-6">
+    <h2>{{model.event.eventName}}</h2>
+    <a ng-click="model.doLike(model.user, model.event._id)">
+        <i class="glyphicon" ng-class="(model.userLiked==1) ? 'glyphicon-heart' : 'glyphicon-heart-empty'"></i>
+        <span>{{model.event.likes}}</span>
+
+    </a>
+    <h4>Review:</h4>
+    <p>{{model.event.description}}</p>
+    <h4>Address</h4>
+    {{model.event.address}}
+    <h4>Reviewed By:</h4>
+    <p><a ng-click="model.getUserData(model.event.eventCreator)" data-target="#myModal" data-toggle="modal">{{model.event.eventCreator}}</a></p>
+    <h4>Ratings:</h4>
+    <fieldset class="rating" disabled>
+        <input type="radio" ng-model="model.event.rating" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+        <input type="radio" ng-model="model.event.rating" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+        <input type="radio" ng-model="model.event.rating" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    </fieldset>
+    <div class="form-group">
+        <div ng-if="model.user.username === model.event.eventCreator">
+            <button id="edit" class="btn btn-success btn-block" data-dismiss="modal" ng-click="model.editEvent(model.event._id)">Edit</button>
+        </div>
+    </div>
+        <div ng-if="model.user.username === model.event.eventCreator" class="form-group">
+            <button class="btn btn-danger btn-block" data-dismiss="modal" ng-click="model.deleteEvent(model.event._id)">Delete</button>
+        </div>
+
+        <div class="form-group">
+
+            <textarea ng-model="model.user.comment"
+                      id="comment"
+                      class="form-control"
+                      placeholder="Add a comment"/>
+        </div>
+        <div class="form-group">
+            <a ng-click="model.addComment(model.user, model.event._id)" class="btn btn-primary btn-block">Comment</a><br>
+            <label for="comment"><h3>What people say :</h3></label></div>
+
+        <div class="form-group">
+            <div ng-repeat="comment in model.event.comments">
+        <span>
+            <i class="fa fa-clock-o">&nbsp;</i>{{comment.dateCreated | date:"h:mma"}}&nbsp;|
+            <i class="fa fa-pencil-square-o">
+            <strong>
+                <a ng-click="model.getUserData(comment.userName)" data-target="#myModal" data-toggle="modal">{{comment.userName}}</a>
+            </strong>&nbsp;</i>says:&nbsp;
+        </span>
+
+        <p>{{comment.description}}</p>
+
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">User Profile :</h4>
+            </div>
+            <div class="modal-body">
+
+                <form class="form-horizontal ng-pristine ng-valid ng-valid-email">
+                    <div class="form-group">
+                        <label for="first-name" class="col-sm-3  control-label">First Name</label>
+                        <div class="col-sm-9">
+                            <input ng-model="model.partiUser.firstName" disabled type="text" id="first-name" class="form-control ng-pristine ng-valid ng-touched" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name" class="col-sm-3 control-label">Last Name</label>
+                        <div class="col-sm-9">
+                            <input ng-model="model.partiUser.lastName" disabled type="text"  class="form-control ng-pristine ng-valid ng-touched" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input ng-model="model.partiUser.email" type="text" disabled class="form-control ng-pristine ng-valid ng-touched" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Interests</label>
+                        <div class="col-sm-9">
+                            <div class="checkbox">
+                                <label><input  type="checkbox" disabled  ng-model="model.partiUser.sports" name="interest" />Sports</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" disabled  ng-model="model.partiUser.movies" name="interest" />Movies</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" disabled ng-model="model.partiUser.rest" name="interest"/>Restaurants</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name" class="col-sm-3 control-label">Number of events</label>
+                        <div class="col-sm-9">
+                            <input ng-model="model.partiUser.events.length" disabled class="form-control ng-pristine ng-valid ng-touched">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
