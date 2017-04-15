@@ -38,7 +38,6 @@
         function findAllEvents() {
             EventService.findEvents()
                 .success(function(events){
-                    console.log(events);
                     model.events = events;
                 })
                 .error(function (err) {
@@ -72,7 +71,6 @@
         }
         
         function renderUsers(users) {
-            console.log(users);
             model.users = users.data;
         }
         function deleteEvent(event) {

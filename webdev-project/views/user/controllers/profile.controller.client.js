@@ -20,7 +20,6 @@
 
         function unregisterUser(user) {
             var answer = confirm("Are you sure?");
-            console.log(answer);
             if(answer) {
                 UserService
                     .deleteUser(user._id)
@@ -36,7 +35,6 @@
         function renderUser(user) {
             vm.user = user;
             var events = user.events;
-            console.log("Exy"+ events);
             vm.events = [];
             var final = [];
             findAllEvents(events, final);
@@ -50,7 +48,6 @@
         function findAllEvents(events, final) {
             if(events.length == 0){
                 vm.events = final;
-                console.log(vm.events);
                 return final;
             }
             return EventService.findEventById(events.shift())

@@ -75,7 +75,6 @@
 
         function renderUser(user) {
             vm.user = user;
-            console.log(user);
             if(user.sports){
                 vm.eventHref = "#/user/"+user._id+"/sport";
             }
@@ -88,7 +87,6 @@
             getEventDetails();
             EventService.findEventsByZip(user)
                 .success(function(events){
-                    console.log(events);
                     vm.events = events;
                 })
                 .error(function (err) {
@@ -119,7 +117,6 @@
                         }
                         CommentService.findCommentsById(vm.event._id)
                             .success(function(comments){
-                                console.log(comments);
                                 vm.event.comments = comments;
                             })
                             .error(function (err) {
@@ -136,7 +133,6 @@
                 delete vm.userLiked;
                 EventService.doLike(user, eventId, 'sub')
                     .success(function(event){
-                        console.log(event.likes);
                         vm.event.likes = event.likes;
                     })
                     .error(function (err) {
@@ -146,7 +142,6 @@
                 vm.userLiked = 1;
                 EventService.doLike(user, eventId, 'add')
                     .success(function(event){
-                        console.log(event.likes);
                         vm.event.likes = event.likes;
                     })
                     .error(function (err) {
@@ -229,7 +224,6 @@
                 EventService
                     .createEvent(vm.userId, event)
                     .success(function(events){
-                        console.log(events);
                         $location.url("/user/"+vm.userId+"/events");
                     })
                     .error(function (err) {
@@ -252,7 +246,6 @@
                         EventService
                             .createEvent(vm.userId, event)
                             .success(function(events){
-                                console.log(events);
                                 $location.url("/user/"+vm.userId+"/events");
                             })
                             .error(function (err) {

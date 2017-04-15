@@ -5899,7 +5899,7 @@ function Browser(window, document, $log, $sniffer) {
       if ($sniffer.history && (!sameBase || !sameState)) {
         history[replace ? 'replaceState' : 'pushState'](state, '', url);
         cacheState();
-        // Do the assignment again so that those two variables are referentially identical.
+        // Do the project-server-code again so that those two variables are referentially identical.
         lastHistoryState = cachedState;
       } else {
         if (!sameBase || pendingLocation) {

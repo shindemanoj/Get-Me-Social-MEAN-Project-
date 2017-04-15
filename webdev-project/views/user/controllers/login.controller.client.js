@@ -37,7 +37,6 @@
                         .then(function (response) {
                             var user = response.data;
                             $rootScope.currentUser = user;
-                            console.log("cant redirect now");
                             if(user.role == "ADMIN"){
                                 $location.url("/admin/"+ user._id);
                             }
@@ -56,49 +55,6 @@
 
         }
 
-        // function login(user) {
-        //     if (user == null) {
-        //         vm.registrationerror = "Please enter your details";
-        //         return;
-        //     }
-        //
-        //         var promise = UserService.findUserByCredentials(user.username, user.password);
-        //         promise
-        //             .success(function (user) {
-        //                 var loginUser = user;
-        //                 if (loginUser != null) {
-        //                     $location.url("/user/" + user._id+"/events");
-        //                 } else {
-        //
-        //                     vm.registrationerror = 'user not found';
-        //                 }
-        //             })
-        //             .error(function (err) {
-        //                 vm.registrationerror = 'user not found';
-        //             });
-        //
-        // }
     }
-
-    // function LoginController($location, UserService, $rootScope) {
-    //     var vm = this;
-    //     vm.login = login;
-    //     function login(user) {
-    //
-    //         if (user == null) {
-    //             vm.registrationerror = "Please enter your details";
-    //             return;
-    //         }
-    //         UserService
-    //             .login(user)
-    //             .then(function (response) {
-    //                 var user = response.data;
-    //                 $rootScope.currentUser = user;
-    //                 $location.url("/user/"+user._id+"/events");
-    //             },function (err) {
-    //                 vm.error = "Username/password does not match";
-    //             });
-    //     }
-    // }
 
 })();

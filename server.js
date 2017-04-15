@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/webdev-project'));
 
 require ("./test/app.js")(app);
 
- var assignment = require("./assignment/app.js");
+ var assignment = require("./project-server-code/app.js");
  assignment(app);
 
 var port = process.env.PORT || 3000;

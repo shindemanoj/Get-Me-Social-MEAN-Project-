@@ -97,7 +97,6 @@
         UserService
             .isAdmin()
             .then(function (user) {
-                console.log(user);
                 if(user == '0') {
                     $location.url('/home')
                 } else {
