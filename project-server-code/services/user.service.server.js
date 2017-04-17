@@ -15,7 +15,7 @@ module.exports = function (app,userModel) {
     app.put("/api/user/:userId", updateUser);
     app.delete("/api/user/:userId", deleteUser);
     app.post("/api/user", createUser);
-    app.post('/api/isAdmin', isAdmin);
+    app.get('/api/isAdmin', isAdmin);
     app.get('/api/allUsers', findAllUsers);
     app.post("/api/login", passport.authenticate('local'), login);
 
@@ -39,7 +39,7 @@ module.exports = function (app,userModel) {
     app.get('/auth/facebook/callback',passport.authenticate('facebook', {
         failureRedirect: '#/login'
     }), function(req, res){
-        var url = '/#/user/'+req.user._id.toString()+'/profile';
+        var url = '/#/user/profile';
         res.redirect(url);
     });
 
@@ -134,7 +134,7 @@ module.exports = function (app,userModel) {
         passport.authenticate('google', {
             failureRedirect: '#/login'
         }), function(req, res){
-            var url = '/#/user/'+req.user._id.toString()+'/profile';
+            var url = '/#/user/profile';
 
 
             res.redirect(url);

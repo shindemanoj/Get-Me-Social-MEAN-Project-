@@ -38,10 +38,10 @@
                             var user = response.data;
                             $rootScope.currentUser = user;
                             if(user.role == "ADMIN"){
-                                $location.url("/admin/"+ user._id);
+                                $location.url("/admin");
                             }
                             else{
-                                $location.url("/user/"+user._id+"/events");
+                                $location.url("/user/events");
                             }
                         },function (err) {
                             vm.error = "Username/password does not match";

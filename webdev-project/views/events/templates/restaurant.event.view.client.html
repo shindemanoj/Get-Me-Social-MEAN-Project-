@@ -5,19 +5,19 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#/user/{{model.userId}}/events"><h1><img src="images/logo2.png" alt="logo"></h1></a>
+                <a class="navbar-brand" href="#/user/events"><h1><img src="images/logo2.png" alt="logo"></h1></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="#/user/{{model.userId}}/events">Events</a></li>
-                    <li class="active" ><a href="#/user/{{model.userId}}/sport">Host an Event</a></li>
-                    <li ng-if="model.user.role == 'ADMIN'"><a href="#/admin/{{model.userId}}">Admin</a></li>
+                    <li ><a href="#/user/events">Events</a></li>
+                    <li class="active" ><a href="#/user/sport">Host an Event</a></li>
+                    <li ng-if="model.user.role == 'ADMIN'"><a href="#/admin">Admin</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#/user/{{model.user._id}}/profile"><i class="fa fa-user fa-fw"></i> My Account</a>
+                            <li><a href="#/user/profile"><i class="fa fa-user fa-fw"></i> My Account</a>
                             </li>
                             <li><a ng-click="model.logout()"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
@@ -33,9 +33,9 @@
 <div class="container">
     <div class="form-group" >
     <ul class="nav nav-tabs">
-        <li ng-if="model.user.sports" role="presentation"><a href="#/user/{{model.userId}}/sport">Sport Event</a></li>
-        <li ng-if="model.user.movies" role="presentation"><a href="#/user/{{model.userId}}/movie">Movie Review</a></li>
-        <li ng-if="model.user.rest" role="presentation" class="active"><a href="#/user/{{model.userId}}/restaurant">Restaurant Review</a></li>
+        <li ng-if="model.user.sports" role="presentation"><a href="#/user/sport">Sport Event</a></li>
+        <li ng-if="model.user.movies" role="presentation"><a href="#/user/movie">Movie Review</a></li>
+        <li ng-if="model.user.rest" role="presentation" class="active"><a href="#/user/restaurant">Restaurant Review</a></li>
     </ul>
     </div>
 
@@ -141,7 +141,7 @@
 <a class="btn btn-primary btn-block"
    ng-click="model.registerEvent(model.event, 'REST')">Create</a>
 
-<a class="btn btn-danger  btn-block" href="#user/{{model.userId}}/events">Cancel</a>
+<a class="btn btn-danger  btn-block" href="#user/events">Cancel</a>
 
 </div>
 

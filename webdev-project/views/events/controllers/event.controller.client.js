@@ -3,7 +3,7 @@
         .module("WebAppMaker")
         .controller("EventsController", eventController);
 
-    function eventController($sce, $routeParams, EventService, UserService, CommentService, $location,$rootScope,FlickrService) {
+    function eventController(loggedin, $sce, $routeParams, EventService, UserService, CommentService, $location,$rootScope,FlickrService) {
         var vm = this;
         vm.registerEvent = registerEvent;
         vm.participateUser = participateUser;
@@ -21,7 +21,7 @@
 
         function init() {
 
-            var userId = $routeParams['uid'];
+            var userId = loggedin.data._id;//$routeParams['uid'];
             var eventId= $routeParams['eid'];
             vm.eventId = eventId;
             vm.userId=userId;
@@ -76,13 +76,13 @@
         function renderUser(user) {
             vm.user = user;
             if(user.sports){
-                vm.eventHref = "#/user/"+user._id+"/sport";
+                vm.eventHref = "#/user/sport";
             }
             else if(user.movies){
-                vm.eventHref = "#/user/"+user._id+"/movie";
+                vm.eventHref = "#/user/movie";
             }
             else{
-                vm.eventHref = "#/user/"+user._id+"/restaurant";
+                vm.eventHref = "#/user/restaurant";
             }
             getEventDetails();
             EventService.findEventsByZip(user)
@@ -154,7 +154,7 @@
             if(event.type == 'MOVIE'){
                 EventService.updateEvent(event._id, event)
                     .success(function(response){
-                        $location.url("/user/"+vm.userId+"/events");
+                        $location.url("/user/events");
                     })
                     .error(function (err) {
                         vm.error = 'sorry could not update event';
@@ -171,7 +171,7 @@
                         event.nearByZipcodes = zipcodes;
                         EventService.updateEvent(event._id, event)
                             .success(function(response){
-                                $location.url("/user/"+vm.userId+"/events");
+                                $location.url("/user/events");
                             })
                             .error(function (err) {
                                 vm.error = 'sorry could not update event';
@@ -188,7 +188,7 @@
             if(answer){
                 EventService.deleteEvent(eventId)
                     .success(function(response){
-                        $location.url("/user/"+vm.userId+"/events");
+                        $location.url("/user/events");
                     })
                     .error(function (err) {
                         vm.error = 'sorry could not delete event';
@@ -196,12 +196,12 @@
             }
         }
         function editEvent(eventId) {
-            $location.url("/user/"+vm.userId+"/event/edit/"+eventId);
+            $location.url("/user/event/edit/"+eventId);
         }
 
         function showEvent(event) {
             vm.event = event;
-            $location.url("/user/"+vm.userId+"/event/"+event._id);
+            $location.url("/user/event/"+event._id);
         }
 
         function addComment(user, eventId) {
@@ -224,7 +224,7 @@
                 EventService
                     .createEvent(vm.userId, event)
                     .success(function(events){
-                        $location.url("/user/"+vm.userId+"/events");
+                        $location.url("/user/events");
                     })
                     .error(function (err) {
                         vm.error = 'sorry could not create event';
@@ -246,7 +246,7 @@
                         EventService
                             .createEvent(vm.userId, event)
                             .success(function(events){
-                                $location.url("/user/"+vm.userId+"/events");
+                                $location.url("/user/events");
                             })
                             .error(function (err) {
                                 vm.error = 'sorry could not create event';

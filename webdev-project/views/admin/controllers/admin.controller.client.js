@@ -3,7 +3,7 @@
         .module('WebAppMaker')
         .controller('AdminController', adminController);
     
-    function adminController($location, UserService, EventService, $routeParams) {
+    function adminController(isAdmin, $location, UserService, EventService, $routeParams) {
         var model = this;
 
         model.deleteUser = deleteUser;
@@ -19,7 +19,7 @@
 
         function init() {
             var userId = $routeParams['uid'];
-            model.adminId = $routeParams['aid'];
+            model.adminId = isAdmin.data._id;//$routeParams['aid'];
             if(userId != undefined){
                 model.userId = userId;
                 UserService
@@ -45,11 +45,11 @@
                 });
         }
         function editUser(userId) {
-            $location.url("/admin/"+model.adminId+"/profile/"+userId);
+            $location.url("/admin/profile/"+userId);
         }
 
         function updateEvent(eventId) {
-            $location.url("/user/"+model.adminId+"/event/edit/"+eventId);
+            $location.url("/user/event/edit/"+eventId);
         }
 
         function findAllUsers() {
@@ -104,7 +104,7 @@
             UserService
                 .updateUser(newUser._id, newUser)
                 .success(function (response) {
-                    $location.url("/admin/" + model.adminId);
+                    $location.url("/admin");
                 })
                 .error(function () {
                     vm.error = "unable to update user";

@@ -26,7 +26,7 @@
         }
 
         function isAdmin() {
-            return $http.post('/api/isAdmin')
+            return $http.get('/api/isAdmin')
                 .then(function (response) {
                     return response.data;
                 });
