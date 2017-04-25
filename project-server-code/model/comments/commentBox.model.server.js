@@ -4,6 +4,7 @@ module.exports = function () {
         findCommentsById: findCommentsById,
         findComments: findComments,
         deleteComment: deleteComment,
+        deleteCommentByUserName: deleteCommentByUserName,
         setModel: setModel,
     };
 
@@ -68,6 +69,14 @@ module.exports = function () {
 
     function deleteComment(eventId) {
         return CommentModel.remove({eventId:eventId}).then(function (response) {
+            return response;
+        }, function (err) {
+            return err;
+        });
+    }
+
+    function deleteCommentByUserName(userName) {
+        return CommentModel.remove({userName:userName}).then(function (response) {
             return response;
         }, function (err) {
             return err;

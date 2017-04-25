@@ -59,13 +59,19 @@
         if(events.length == 0){
             return findUserById(userId)
                 .then(function (user) {
-                        return model.eventModel.findEventByPerticipants(user.username)
-                            .then(function (participatedEvents) {
-                                    return spliceUserFromEvents(participatedEvents, user);
-                                },
-                                function (err) {
-                                    return err;
-                                });
+                    return model.commentModel.deleteCommentByUserName(user.username)
+                        .then(function (res) {
+                                return model.eventModel.findEventByPerticipants(user.username)
+                                    .then(function (participatedEvents) {
+                                            return spliceUserFromEvents(participatedEvents, user);
+                                        },
+                                        function (err) {
+                                            return err;
+                                        });
+                            },
+                            function (err) {
+                                return err;
+                            });
                     },
                     function (err) {
                         return err;

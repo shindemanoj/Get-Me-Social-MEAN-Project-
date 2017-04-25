@@ -13,6 +13,7 @@ module.exports = function() {
         url: String,
         rating: Number,
         likes:{type: Number, default:0},
+        views:{type: Number, default:0},
         nearByZipcodes: [{type: String}],
         dateCreated: {type:Date, default: Date.now()}
     }, {collection: "gms.events"});

@@ -61,9 +61,10 @@
 
                     <!--<a href="" class="btn btn-primary" data-toggle="modal" data-target="#{{event.eventName}}">Read More</a>-->
                     <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{event.eventName}}">Open Modal</button>-->
-                    <a href="" class="btn btn-primary" ng-click="model.showEvent(event)">Read More</a>
+                    <a href="" class="btn btn-primary" ng-click="model.showEvent(event, model.user)">Read More</a>
                     &nbsp;&nbsp;&nbsp;
-                    Likes:&nbsp;{{event.likes}}
+                    Likes:&nbsp;{{event.likes}} &nbsp;&nbsp;&nbsp;
+                    Views: {{event.views}}
 
                 </div>
 

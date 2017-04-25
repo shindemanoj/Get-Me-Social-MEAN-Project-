@@ -15,9 +15,14 @@
             "findNearByZipCodes": findNearByZipCodes,
             "addParticipant": addParticipant,
             "doLike": doLike,
-            "findEvents": findEvents
+            "findEvents": findEvents,
+            "increaseViews": increaseViews
         };
         return api;
+
+        function increaseViews(user, eventId) {
+            return $http.put("/api/views?eventId="+eventId, user);
+        }
 
         function doLike(user, eventId, op) {
             return $http.put("/api/like?eventId="+eventId+"&op="+op, user);

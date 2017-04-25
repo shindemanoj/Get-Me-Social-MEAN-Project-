@@ -9,6 +9,7 @@ module.exports = function () {
         setModel: setModel,
         addParticipant: addParticipant,
         updateLike: updateLike,
+        updateViews: updateViews,
         findEvents: findEvents,
         findEventsbyCreator: findEventsbyCreator,
         findEventByPerticipants: findEventByPerticipants
@@ -26,6 +27,29 @@ module.exports = function () {
     }
     function findEventsbyCreator(userId) {
         return EventModel.find({_user:userId});
+    }
+    function updateViews(user, eventId) {
+        return model.userModel
+            .findUserById(user._id)
+            .then(function (user) {
+                return EventModel.findOne({_id:eventId})
+                    .then(function (event) {
+                        if(user.viewedEvents.indexOf(eventId) !== -1) {
+                            return event;
+                        }
+                        else{
+                            event.views += 1;
+                            user.viewedEvents.push(eventId);
+                        }
+                        event.save();
+                        user.save();
+                        return event;
+                    }, function (err) {
+                        return err;
+                    });
+            }, function (err) {
+                return err;
+            });
     }
     function updateLike(user, eventId, op) {
         return model.userModel

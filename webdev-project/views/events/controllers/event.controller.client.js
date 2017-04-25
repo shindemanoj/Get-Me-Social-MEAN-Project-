@@ -199,7 +199,14 @@
             $location.url("/user/event/edit/"+eventId);
         }
 
-        function showEvent(event) {
+        function showEvent(event, user) {
+            EventService.increaseViews(user, event._id)
+                .success(function(event){
+                    vm.event.views = event.views;
+                })
+                .error(function (err) {
+                    vm.error = 'sorry could not create event';
+                });
             vm.event = event;
             $location.url("/user/event/"+event._id);
         }

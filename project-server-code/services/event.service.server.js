@@ -6,6 +6,7 @@ module.exports = function (app,eventModel) {
     app.post("/api/user/:userId/event", createEvent);
     app.put("/api/event/:eventId", addParticipant);
     app.put("/api/like", updateLike);
+    app.put("/api/views", updateViews);
     app.get("/api/events", findEvents);
 
     function findEvents(req, res) {
@@ -13,6 +14,18 @@ module.exports = function (app,eventModel) {
             .findEvents()
             .then(function (events) {
                 res.json(events);
+            }, function (err) {
+                res.sendStatus(404);
+            });
+    }
+
+    function updateViews(req, res) {
+        var eventId = req.query['eventId'];
+        var user = req.body;
+        eventModel
+            .updateViews(user, eventId)
+            .then(function (event) {
+                res.json(event);
             }, function (err) {
                 res.sendStatus(404);
             });
