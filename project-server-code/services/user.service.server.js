@@ -20,15 +20,15 @@ module.exports = function (app,userModel) {
     app.post("/api/login", passport.authenticate('local'), login);
 
     var facebookConfig = {
-        clientID     : "process.env.FACEBOOK_CLIENT_ID",
-        clientSecret : "process.env.FACEBOOK_CLIENT_SECRET",
-        callbackURL  : "process.env.FACEBOOK_CALLBACK_URL",
+        clientID     :  process.env.FACEBOOK_CLIENT_ID,
+        clientSecret :  process.env.FACEBOOK_CLIENT_SECRET,
+        callbackURL  :  process.env.FACEBOOK_CALLBACK_URL,
         profileFields: ['id','displayName', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified']
     };
     var googleConfig = {
-        clientID     : "process.env.GOOGLE_CLIENT_ID",
-        clientSecret : "process.env.GOOGLE_CLIENT_SECRET",
-        callbackURL  : "process.env.GOOGLE_CALLBACK_URL"
+        clientID     :  process.env.GOOGLE_CLIENT_ID,
+        clientSecret :  process.env.GOOGLE_CLIENT_SECRET,
+        callbackURL  :  process.env.GOOGLE_CALLBACK_URL
     };
 
     passport.use(new LocalStrategy(localStrategy));
