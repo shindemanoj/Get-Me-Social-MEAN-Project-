@@ -20,15 +20,15 @@ module.exports = function (app,userModel) {
     app.post("/api/login", passport.authenticate('local'), login);
 
     var facebookConfig = {
-        clientID     : '110288732980820',
-        clientSecret : '557c9383f6ff6057ce7b2fbd6066a99a',
-        callbackURL  : 'https://get-me-social-mean.herokuapp.com/auth/facebook/callback',
+        clientID     : "process.env.FACEBOOK_CLIENT_ID",
+        clientSecret : "process.env.FACEBOOK_CLIENT_SECRET",
+        callbackURL  : "process.env.FACEBOOK_CALLBACK_URL",
         profileFields: ['id','displayName', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified']
     };
     var googleConfig = {
-        clientID     : '842454390967-pqeopfo4m7ujlcgvjqvo6nq1nosrf868.apps.googleusercontent.com',
-        clientSecret : 'tTFi0xvnGN8bTTH8-m6ztknu',
-        callbackURL  : 'https://get-me-social-mean.herokuapp.com/auth/google/callback'
+        clientID     : "process.env.GOOGLE_CLIENT_ID",
+        clientSecret : "process.env.GOOGLE_CLIENT_SECRET",
+        callbackURL  : "process.env.GOOGLE_CALLBACK_URL"
     };
 
     passport.use(new LocalStrategy(localStrategy));
