@@ -123,7 +123,7 @@ module.exports = function () {
         return EventModel.findOne({_id:eventId});
     }
     function findEvents() {
-        return EventModel.find({eventDate: {"$gte": Date.now()}}).sort({dateCreated:-1});
+        return EventModel.find().sort({dateCreated:-1});
     }
     function findEventsByZip(zipcode, userId){
         return model.userModel
@@ -142,9 +142,9 @@ module.exports = function () {
                     type3 = "REST";
                 }
                 return EventModel.find(
-                    { $and: [ { type: { $in: [type1, type3] } }, { nearByZipcodes: zipcode, eventDate: {"$gte": Date.now()}} ] }
+                    { $and: [ { type: { $in: [type1, type3] } }, { nearByZipcodes: zipcode} ] }
                     ).then(function (events) {
-                    return EventModel.find({ type: type2, eventDate: {"$gte": Date.now()}})
+                    return EventModel.find({ type: type2})
                         .then(function (movieEvents) {
                         if(movieEvents[0]){
                             events = events.concat(movieEvents);
