@@ -22,13 +22,13 @@ module.exports = function (app,userModel) {
     var facebookConfig = {
         clientID     : '110288732980820',
         clientSecret : '557c9383f6ff6057ce7b2fbd6066a99a',
-        callbackURL  : 'http://127.0.0.1:3000/auth/facebook/callback',
+        callbackURL  : 'https://get-me-social-mean.herokuapp.com/auth/facebook/callback',
         profileFields: ['id','displayName', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified']
     };
     var googleConfig = {
         clientID     : '842454390967-pqeopfo4m7ujlcgvjqvo6nq1nosrf868.apps.googleusercontent.com',
         clientSecret : 'tTFi0xvnGN8bTTH8-m6ztknu',
-        callbackURL  : 'http://127.0.0.1:3000/auth/google/callback'
+        callbackURL  : 'https://get-me-social-mean.herokuapp.com/auth/google/callback'
     };
 
     passport.use(new LocalStrategy(localStrategy));
