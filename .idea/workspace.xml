@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1773c66-7252-4ce6-927c-44fa0f71772c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.profile.edit.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.profile.edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/editors/event.edit.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/editors/event.edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/event.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/event.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/main.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/main.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/movie.event.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/movie.event.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/restaurant.event.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/restaurant.event.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/sport.edit.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/sport.edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/events/templates/sport.event.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/events/templates/sport.event.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/user/templates/about-us.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/user/templates/about-us.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/user/templates/login.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/user/templates/login.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/user/templates/profile.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/user/templates/profile.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/user/templates/register.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/user/templates/register.view.client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,18 +27,18 @@
       <file leaf-file-name="event.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webdev-project/views/events/templates/event.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="439">
+              <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webdev-project/views/events/templates/main.view.client.html">
+      <file leaf-file-name="event.model.server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="192">
+              <caret line="125" column="64" lean-forward="false" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -129,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.edit.view.client.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="event.edit.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webdev-project/views/events/templates/editors/event.edit.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
+            <state relative-caret-position="373">
               <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#2414#2420#0" expanded="true" />
@@ -234,7 +221,6 @@
         <option value="$PROJECT_DIR$/project-server-code/model/user/user.schema.server.js" />
         <option value="$PROJECT_DIR$/webdev-project/index.html" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
         <option value="$PROJECT_DIR$/webdev-project/views/user/templates/home.view.client.html" />
         <option value="$PROJECT_DIR$/project-server-code/services/user.service.server.js" />
         <option value="$PROJECT_DIR$/webdev-project/views/user/templates/register.view.client.html" />
@@ -250,6 +236,7 @@
         <option value="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.profile.edit.view.client.html" />
         <option value="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.view.client.html" />
         <option value="$PROJECT_DIR$/webdev-project/views/events/templates/editors/event.edit.view.client.html" />
+        <option value="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
       </list>
     </option>
   </component>
@@ -505,6 +492,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Get-Me-Social-MEAN-Project-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Get-Me-Social-MEAN-Project-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project-server-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -663,12 +672,12 @@
       <workItem from="1502554574678" duration="428000" />
       <workItem from="1502555905151" duration="567000" />
       <workItem from="1502650118378" duration="2638000" />
-      <workItem from="1502653080533" duration="5472000" />
+      <workItem from="1502653080533" duration="6563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193705000" />
+    <option name="totallyTimeSpent" value="194796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -682,7 +691,7 @@
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24776785" sideWeight="0.49589685" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63175124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63175124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31666666" sideWeight="0.5041032" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -946,14 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webdev-project/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -1014,14 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webdev-project/views/events/templates/event.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1094,11 +1087,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webdev-project/views/events/templates/editors/event.edit.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
+        <state relative-caret-position="373">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#2414#2420#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webdev-project/views/events/templates/event.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="125" column="64" lean-forward="false" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
