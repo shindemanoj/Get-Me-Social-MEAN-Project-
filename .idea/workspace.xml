@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1773c66-7252-4ce6-927c-44fa0f71772c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/views/user/templates/home.view.client.html" afterPath="$PROJECT_DIR$/webdev-project/views/user/templates/home.view.client.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/webdev-project/views/user/templates/home.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+              <caret line="52" column="103" lean-forward="false" selection-start-line="52" selection-start-column="103" selection-end-line="52" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -554,12 +553,12 @@
       <workItem from="1502554574678" duration="428000" />
       <workItem from="1502555905151" duration="567000" />
       <workItem from="1502650118378" duration="2638000" />
-      <workItem from="1502653080533" duration="4852000" />
+      <workItem from="1502653080533" duration="5001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193085000" />
+    <option name="totallyTimeSpent" value="193234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -964,7 +963,7 @@
     <entry file="file://$PROJECT_DIR$/webdev-project/views/user/templates/home.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+          <caret line="52" column="103" lean-forward="false" selection-start-line="52" selection-start-column="103" selection-end-line="52" selection-end-column="103" />
           <folding />
         </state>
       </provider>
