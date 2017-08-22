@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1773c66-7252-4ce6-927c-44fa0f71772c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webdev-project/services/event.service.client.js" afterPath="$PROJECT_DIR$/webdev-project/services/event.service.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.model.server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="event.model.server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="137" column="20" lean-forward="false" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
+            <state relative-caret-position="201">
+              <caret line="145" column="21" lean-forward="false" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -74,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.service.client.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="event.service.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webdev-project/services/event.service.client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
@@ -141,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>blog</find>
       <find>myModal</find>
       <find>review</find>
       <find>console.log</find>
@@ -171,6 +170,7 @@
       <find>ang</find>
       <find>date</find>
       <find>All Rights Reserved</find>
+      <find>$gte</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -235,8 +235,8 @@
         <option value="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.profile.edit.view.client.html" />
         <option value="$PROJECT_DIR$/webdev-project/views/admin/templates/admin.view.client.html" />
         <option value="$PROJECT_DIR$/webdev-project/views/events/templates/editors/event.edit.view.client.html" />
-        <option value="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
         <option value="$PROJECT_DIR$/webdev-project/services/event.service.client.js" />
+        <option value="$PROJECT_DIR$/project-server-code/model/event/event.model.server.js" />
       </list>
     </option>
   </component>
@@ -696,12 +696,12 @@
       <workItem from="1502650118378" duration="2638000" />
       <workItem from="1502653080533" duration="7161000" />
       <workItem from="1502924648523" duration="51000" />
-      <workItem from="1503363457068" duration="1269000" />
+      <workItem from="1503363457068" duration="2074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196714000" />
+    <option name="totallyTimeSpent" value="197519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1087,14 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="137" column="20" lean-forward="false" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1115,6 +1107,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="68" column="90" lean-forward="false" selection-start-line="68" selection-start-column="90" selection-end-line="68" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/event/event.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="145" column="21" lean-forward="false" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
           <folding />
         </state>
       </provider>
