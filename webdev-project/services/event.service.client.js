@@ -66,7 +66,7 @@
         }
 
         function findNearByZipCodes(zipcode){
-            var key = process.env.ZIPCODE_API_KEY;
+            var key = "O3YJD2jqQZTarMhaLf58moZsd064XipMmnvZqPqhOjrg6JrSYx1lV0N90UdYdCKz";
             var format = "json";
             var units = "mile";
             var distance = "2";
